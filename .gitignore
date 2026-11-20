@@ -1,6 +1,4 @@
-data/*.csv
+data/car_price_prediction.csv
 .ipynb_checkpoints/
 __pycache__/
 .DS_Store
-*.joblib
-*.pkl
