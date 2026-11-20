@@ -12,7 +12,7 @@ Le modèle est mis en pratique dans une **application Streamlit** qui répond à
 | **Sinistre en perte totale** | donne une valeur de référence, avec une fourchette, pour l'indemnisation après un vol ou un accident grave |
 | **Contrôle de portefeuille** | estime toute une flotte à partir d'un fichier CSV et signale les **sur-évaluations** (risque de sur-assurance ou de fraude) et les **sous-assurances** possibles |
 
-🔗 **Application en ligne :** *lien à venir après le déploiement*
+🔗 **Application en ligne :** https://valeur-venale-auto.streamlit.app
 
 ![Contrôle d'un portefeuille](docs/capture_portefeuille.png)
 
