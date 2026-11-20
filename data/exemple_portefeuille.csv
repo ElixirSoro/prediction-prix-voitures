@@ -1,0 +1,31 @@
+Levy,Manufacturer,Model,Prod. year,Category,Leather interior,Fuel type,Engine volume,Mileage,Cylinders,Gear box type,Drive wheels,Doors,Wheel,Color,Airbags,Valeur_declaree
+-,VOLKSWAGEN,Jetta,2009,Sedan,Yes,Petrol,2.5,130000 km,8.0,Tiptronic,Rear,04-May,Left wheel,White,12,14100.0
+-,TOYOTA,Prius,2015,Hatchback,No,Hybrid,1.8,0 km,4.0,Automatic,Front,04-May,Left wheel,Silver,12,25700.0
+900,JEEP,Compass,2015,Jeep,Yes,Petrol,2.4,44729 km,4.0,Automatic,Front,04-May,Left wheel,White,4,43100.0
+-,VOLKSWAGEN,Golf 3,1996,Goods wagon,No,Diesel,1.7 Turbo,0 km,4.0,Manual,Front,04-May,Left wheel,White,2,6300.0
+-,TOYOTA,Prius,2007,Sedan,No,Petrol,1.5,288166 km,4.0,Automatic,Front,04-May,Left wheel,White,4,10100.0
+502,TOYOTA,Aqua,2013,Sedan,Yes,Petrol,1.5,99600 km,4.0,Automatic,Front,04-May,Left wheel,Yellow,4,15100.0
+-,TOYOTA,Prius,2008,Sedan,No,Petrol,1.5,23000 km,4.0,Automatic,Front,04-May,Left wheel,Grey,12,11300.0
+1024,HYUNDAI,H1,2010,Minivan,Yes,Diesel,2.5,49140 km,4.0,Automatic,Front,04-May,Left wheel,Black,4,6900.0
+1172,MERCEDES-BENZ,E 350,2011,Sedan,Yes,Diesel,3.5,64496 km,6.0,Automatic,4x4,04-May,Left wheel,Blue,12,13100.0
+528,HYUNDAI,Elantra,2014,Sedan,Yes,Petrol,1.6,164649 km,4.0,Automatic,Front,04-May,Left wheel,Grey,4,14800.0
+-,TOYOTA,Highlander,2008,Jeep,No,Hybrid,3.3,249600 km,6.0,Variator,4x4,04-May,Left wheel,Silver,12,30000.0
+584,HYUNDAI,Elantra,2014,Sedan,No,Petrol,1.8,120000 km,4.0,Tiptronic,Front,04-May,Left wheel,Silver,0,27600.0
+1399,LEXUS,RX 450,2010,Jeep,Yes,Hybrid,3.5,186005 km,6.0,Automatic,4x4,04-May,Left wheel,Silver,12,13400.0
+-,MERCEDES-BENZ,E 270,2002,Sedan,Yes,Diesel,2.7 Turbo,287000 km,5.0,Tiptronic,Rear,04-May,Left wheel,Silver,10,13600.0
+-,FORD,Focus Flexfuel,2015,Sedan,No,Petrol,2,165616 km,4.0,Automatic,Front,04-May,Left wheel,Black,6,16300.0
+1850,MERCEDES-BENZ,ML 350,2008,Jeep,Yes,Diesel,3.5,366869 km,6.0,Automatic,4x4,04-May,Left wheel,Black,12,1900.0
+-,MERCEDES-BENZ,Sprinter,2002,Microbus,No,Diesel,2.2 Turbo,0 km,5.0,Manual,Rear,02-Mar,Left wheel,White,2,12600.0
+-,TOYOTA,Prius,2010,Hatchback,No,Petrol,1.8,0 km,4.0,Automatic,Front,04-May,Left wheel,Grey,8,15100.0
+-,VOLKSWAGEN,Golf,1996,Hatchback,No,Petrol,1.6,220000 km,1.0,Manual,Front,04-May,Left wheel,Black,0,2700.0
+753,HYUNDAI,Sonata,2012,Sedan,Yes,Petrol,2.4,147200 km,4.0,Tiptronic,Front,04-May,Left wheel,Black,8,26700.0
+-,MERCEDES-BENZ,E 300,1989,Sedan,No,Petrol,3,367000 km,6.0,Automatic,Rear,04-May,Left wheel,Grey,0,4500.0
+-,HONDA,FIT,2008,Hatchback,No,Petrol,1.3,174000 km,4.0,Tiptronic,Front,04-May,Right-hand drive,White,8,9100.0
+-,PEUGEOT,607,2001,Sedan,Yes,Diesel,2.2 Turbo,325000 km,6.0,Tiptronic,Front,04-May,Left wheel,Black,6,3100.0
+-,TOYOTA,Aqua HIBRID,2013,Hatchback,No,Hybrid,1.5,115000 km,4.0,Automatic,Front,04-May,Right-hand drive,Silver,7,16000.0
+1268,TOYOTA,Aqua,2012,Hatchback,No,Hybrid,1.5,145000 km,4.0,Automatic,Front,04-May,Right-hand drive,Grey,2,9500.0
+-,MERCEDES-BENZ,E 320,2004,Sedan,Yes,Petrol,3.2,130000 km,6.0,Tiptronic,Rear,04-May,Right-hand drive,Silver,8,16100.0
+779,TOYOTA,RAV 4,2013,Jeep,No,Petrol,2.5,68000 km,6.0,Tiptronic,4x4,04-May,Left wheel,Grey,12,75300.0
+790,DAEWOO,Lacetti,2009,Sedan,Yes,Petrol,1.6,159634 km,4.0,Automatic,Front,04-May,Left wheel,Silver,4,4000.0
+831,SSANGYONG,Actyon,2017,Jeep,Yes,Petrol,1.6,71402 km,4.0,Automatic,Front,04-May,Left wheel,Silver,4,35500.0
+640,HYUNDAI,Santa FE,2013,Jeep,Yes,Diesel,2,179067 km,4.0,Automatic,Front,04-May,Left wheel,Black,4,28800.0

@@ -1,0 +1,194 @@
+{
+  "best_model": "Random Forest",
+  "cross_validation_5_folds": {
+    "Random Forest": {
+      "r2_log": 0.755654585496378,
+      "r2": 0.7005976587159866,
+      "mae": 4603.187182996868,
+      "median_ape": 0.16702808488383034
+    },
+    "XGBoost": {
+      "r2_log": 0.7654244550320048,
+      "r2": 0.6860798923182423,
+      "mae": 4653.073379166344,
+      "median_ape": 0.1640037898374971
+    }
+  },
+  "test": {
+    "r2_log": 0.7350819748604288,
+    "r2": 0.6608334599659214,
+    "mae": 4854.186747864082,
+    "median_ape": 0.17888944021792252,
+    "coverage_80": 0.7773902935193258
+  },
+  "interval_log_halfwidth": 0.4599314577560367,
+  "n_rows_used": 17205,
+  "n_rows_raw": 19237,
+  "price_filter": [
+    500,
+    250000
+  ],
+  "feature_importance": {
+    "Airbags": 0.17017663529365223,
+    "Prod. year": 0.15803620342872754,
+    "Mileage": 0.11931740206350502,
+    "Gear box type": 0.1180791779196353,
+    "Levy": 0.08202744618885406,
+    "Manufacturer": 0.059451854419206876,
+    "Engine volume": 0.05599743865729449,
+    "Fuel type": 0.047247792548969346,
+    "Leather interior": 0.04128533917552368,
+    "Color": 0.03805536979322075,
+    "Category": 0.03125986349490004,
+    "Turbo": 0.031133450890234973,
+    "Drive wheels": 0.02948989598221271,
+    "Cylinders": 0.01153760236936075,
+    "Wheel": 0.005612398840308695,
+    "Doors": 0.00129212893439353
+  },
+  "options": {
+    "Manufacturer": [
+      "ACURA",
+      "AUDI",
+      "BMW",
+      "BUICK",
+      "CADILLAC",
+      "CHEVROLET",
+      "CHRYSLER",
+      "DAEWOO",
+      "DAIHATSU",
+      "DODGE",
+      "FIAT",
+      "FORD",
+      "GAZ",
+      "GMC",
+      "HONDA",
+      "HYUNDAI",
+      "INFINITI",
+      "JAGUAR",
+      "JEEP",
+      "KIA",
+      "LAND ROVER",
+      "LEXUS",
+      "LINCOLN",
+      "MAZDA",
+      "MERCEDES-BENZ",
+      "MINI",
+      "MITSUBISHI",
+      "NISSAN",
+      "OPEL",
+      "PEUGEOT",
+      "PORSCHE",
+      "RENAULT",
+      "SKODA",
+      "SSANGYONG",
+      "SUBARU",
+      "SUZUKI",
+      "TOYOTA",
+      "VAZ",
+      "VOLKSWAGEN",
+      "VOLVO"
+    ],
+    "Category": [
+      "Cabriolet",
+      "Coupe",
+      "Goods wagon",
+      "Hatchback",
+      "Jeep",
+      "Limousine",
+      "Microbus",
+      "Minivan",
+      "Pickup",
+      "Sedan",
+      "Universal"
+    ],
+    "Leather interior": [
+      "No",
+      "Yes"
+    ],
+    "Fuel type": [
+      "CNG",
+      "Diesel",
+      "Hybrid",
+      "Hydrogen",
+      "LPG",
+      "Petrol",
+      "Plug-in Hybrid"
+    ],
+    "Gear box type": [
+      "Automatic",
+      "Manual",
+      "Tiptronic",
+      "Variator"
+    ],
+    "Drive wheels": [
+      "4x4",
+      "Front",
+      "Rear"
+    ],
+    "Doors": [
+      "2-3",
+      "4-5",
+      ">5"
+    ],
+    "Wheel": [
+      "Left wheel",
+      "Right-hand drive"
+    ],
+    "Color": [
+      "Beige",
+      "Black",
+      "Blue",
+      "Brown",
+      "Carnelian red",
+      "Golden",
+      "Green",
+      "Grey",
+      "Orange",
+      "Pink",
+      "Purple",
+      "Red",
+      "Silver",
+      "Sky blue",
+      "White",
+      "Yellow"
+    ]
+  },
+  "ranges": {
+    "Prod. year": [
+      1994.0,
+      2019.0,
+      2012.0
+    ],
+    "Levy": [
+      308.0,
+      2297.0,
+      781.0
+    ],
+    "Engine volume": [
+      1.0,
+      5.0,
+      2.0
+    ],
+    "Turbo": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "Mileage": [
+      0.0,
+      505815.99999999814,
+      124800.0
+    ],
+    "Cylinders": [
+      3.0,
+      8.0,
+      4.0
+    ],
+    "Airbags": [
+      0.0,
+      12.0,
+      4.0
+    ]
+  }
+}
