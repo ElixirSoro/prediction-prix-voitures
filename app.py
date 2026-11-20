@@ -13,7 +13,7 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
-from preprocessing import FEATURES, clean_raw, prepare_features, price_class  # noqa: E402
+from preprocessing import clean_raw, prepare_features, price_class  # noqa: E402
 
 st.set_page_config(page_title="Estimateur de valeur vénale auto", page_icon="🚗", layout="wide")
 
@@ -29,6 +29,28 @@ model, meta = load_model()
 Q = meta["interval_log_halfwidth"]
 OPT, RNG = meta["options"], meta["ranges"]
 TOL = 0.0  # tolérance au-delà de la fourchette à 80 %
+
+# Colonnes attendues dans un fichier de portefeuille (noms identiques au jeu de données d'origine)
+REQUIRED_COLS = pd.DataFrame([
+    ("Manufacturer", "Constructeur", "TOYOTA, HYUNDAI, MERCEDES-BENZ", "Oui"),
+    ("Prod. year", "Année de fabrication", "2014", "Oui"),
+    ("Category", "Catégorie de véhicule", "Sedan, Jeep, Hatchback, Minivan, Coupe…", "Oui"),
+    ("Leather interior", "Intérieur cuir", "Yes / No", "Oui"),
+    ("Fuel type", "Carburant", "Petrol, Diesel, Hybrid, LPG, CNG, Plug-in Hybrid…", "Oui"),
+    ("Engine volume", "Cylindrée en litres, avec « Turbo » si turbo", "2.0 ou 2.0 Turbo", "Oui"),
+    ("Mileage", "Kilométrage", "125000 km ou 125000", "Oui"),
+    ("Cylinders", "Nombre de cylindres", "4", "Oui"),
+    ("Gear box type", "Boîte de vitesses", "Automatic, Manual, Tiptronic, Variator", "Oui"),
+    ("Drive wheels", "Roues motrices", "Front, Rear, 4x4", "Oui"),
+    ("Doors", "Nombre de portes", "4-5, 2-3, >5 (ou 04-May, 02-Mar)", "Oui"),
+    ("Wheel", "Position du volant", "Left wheel / Right-hand drive", "Oui"),
+    ("Color", "Couleur", "Black, White, Silver…", "Oui"),
+    ("Airbags", "Nombre d'airbags", "8", "Oui"),
+    ("Levy", "Taxe d'importation en $ (« - » si inconnue)", "1018 ou -", "Oui (peut être « - »)"),
+    ("Model", "Modèle (affiché seulement, non utilisé par le modèle)", "Camry", "Non"),
+    ("Valeur_declaree", "Valeur déclarée par l'assuré, en $", "15000", "Non"),
+], columns=["Colonne", "Description", "Exemple de valeur", "Obligatoire"])
+RAW_REQUIRED = REQUIRED_COLS.loc[REQUIRED_COLS["Obligatoire"] != "Non", "Colonne"].tolist()
 
 
 def estimate(X: pd.DataFrame) -> pd.DataFrame:
@@ -114,6 +136,10 @@ with tab2:
     st.markdown("Chargez un fichier CSV de véhicules au **même format que le jeu de données d'origine**, "
                 "avec une colonne facultative `Valeur_declaree`. L'application estime chaque véhicule et "
                 "signale les valeurs déclarées hors de la fourchette.")
+    with st.expander("📋 Colonnes que le fichier doit contenir", expanded=True):
+        st.markdown("Les noms de colonnes doivent être **écrits exactement comme ci-dessous** (en anglais, "
+                    "majuscules et espaces compris). Les autres colonnes éventuelles sont conservées dans le résultat.")
+        st.dataframe(REQUIRED_COLS, hide_index=True, width="stretch", height=35 * (len(REQUIRED_COLS) + 1) + 3)
     example = ROOT / "data" / "exemple_portefeuille.csv"
     if example.exists():
         st.download_button("Télécharger un fichier d'exemple", example.read_bytes(),
@@ -121,9 +147,10 @@ with tab2:
     up = st.file_uploader("Fichier CSV du portefeuille", type="csv")
     if up is not None:
         raw = pd.read_csv(up)
-        missing = [c for c in FEATURES if c not in clean_raw(raw.head(1)).columns]
+        missing = [c for c in RAW_REQUIRED if c not in raw.columns]
         if missing:
-            st.error("Colonnes manquantes : " + ", ".join(missing))
+            st.error("Colonnes manquantes : " + ", ".join(missing)
+                     + ". Consultez la liste des colonnes attendues ci-dessus.")
         else:
             df = clean_raw(raw)
             out = pd.concat([raw.reset_index(drop=True), estimate(df).reset_index(drop=True)], axis=1)
